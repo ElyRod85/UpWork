@@ -1,0 +1,116 @@
+
+main { margin: 150px auto;
+    @media screen and (max-width: 768px) { margin: 120px auto; }
+
+    .work-exp { width: 90%; margin: 50px auto 0 auto;
+        display: flex; flex-flow: column wrap; justify-content: flex-start; align-items: flex-start;
+        @media screen and (max-width: 830px) { width: 90%; }
+        .work-intro {  
+            width: 100%; padding: 0; margin: 0;
+            h1, p { text-align: center; margin: 0; }
+            p { margin-top: 10px; }
+        }
+        #accordion-sec {
+            width: 100%; margin: 0 auto; 
+            display: flex; flex-flow: column wrap; justify-content: center; align-items: center;
+            h2 { margin: 0 auto 15px auto; font-size: 32px; }
+            p { margin-top: 0; margin-bottom: 0; }
+            @media screen and (max-width: 768px) { gap: 0; }
+            
+            .accordion-container { width: 100%; margin: 50px auto 0 auto;
+                .accordion-item { border-radius: var(--border-radius); margin: 0 auto 20px auto;
+                    border: 1px solid var(--medium-gray); padding: 2px; background-color: var(--medium-gray);
+                    h2.accordion-header { margin: 0; border-radius: var(--border-radius);  
+                        button.accordion-button {
+                            font-weight: 800; letter-spacing: -1px; font-size: 20px; color: var(--dark-gray);
+                            &:hover { background-color: var(--medium-green); color: var(--dark-green); }
+                        }
+                        .accordion-button::after {
+                            font-family: 'Font Awesome 6 Free';
+                            background-image: none;
+                            content: "\f078"; 
+                            --bs-accordion-btn-icon-width: initial;
+                        }
+                        .accordion-button::after:not(.collapsed) {
+                            font-family: 'Font Awesome 6 Free';
+                            background-image: none;
+                            content: "\f077"; 
+                            --bs-accordion-btn-icon-width: initial;
+                        }
+                        .details { font-weight: 400; letter-spacing: -0.5; padding: 0 10px; font-size: 20px; 
+                            @media screen and (max-width: 792px) { display: none; }
+                        }
+                        --bs-accordion-active-bg: var(--light-green);
+                        --bs-accordion-btn-bg: var(--white);
+                    }
+                    .accordion-body {
+                        border-top: 3px solid var(--medium-gray);
+                        font-family: var(--font); color: var(--dark-gray);
+                        background-color: var(--white); padding: 20px 20px 10px 20px;
+                        .exp-box { margin: 0 auto; width: 100%; border-radius: var(--border-radius); 
+                            .exp-text { padding: 0; margin: 0 0 30px 0;
+                                p { margin-bottom: 15px; }
+                                @media screen and (max-width: 830px) { padding: 10px 0; }
+                                .details { font-weight: 400; letter-spacing: -0.5; font-size: 19px; 
+                                    text-align: center;
+                                    &:first-of-type { margin-bottom: 5px; }
+                                    &:nth-of-type(2) { margin-top: 5px; margin-bottom: 30px; }
+                                    @media screen and (min-width: 792px) { display: none; }
+                                }
+                                .resp-skills { 
+                                    width: 100%; display: flex; flex-flow: row wrap; justify-content: space-between; align-items: stretch;
+                                    margin: 40px auto 0 auto;
+                                    @media screen and (max-width: 830px) { flex-flow: column wrap; justify-content: center; align-items: center; gap: 40px; }
+                                    .resp-box { border: 2px solid var(--dark-gray); background-color: var(--white); border-radius: var(--border-radius);
+                                        &:first-of-type { width: 60%; 
+                                            @media screen and (max-width: 830px) { width: 100%; }
+                                        }
+                                        &:last-of-type { width: 35%; 
+                                            @media screen and (max-width: 830px) { width: 100%; }
+                                        }
+                                        .resp-title { padding: 20px 10px; background-color: var(--dark-gray);
+                                            h3 { font-size: 23px; text-align: center; line-height: 1; margin: 0; color: var(--white);
+                                                font-weight: 700;
+                                            }
+                                        }
+                                        .resp-contents { padding: 20px 15px 0 10px; }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .accordion-button:not(.collapsed) { color: inherit; }
+                button.accordion-button:focus{ box-shadow: inherit; }
+            }
+        }
+
+        /* Logo carousel */
+        
+        @keyframes slide {
+            from { transform: translateX(0); }
+            to { transform: translateX(-100%); }
+        }
+        
+        .logos {
+            overflow: hidden;
+            padding: 0; margin: 80px auto 50px auto;
+            white-space: nowrap;
+            position: relative;
+            width: 100%;
+        }
+        .logos:before,
+        .logos:after {
+            position: absolute;
+            top: 0;
+            width: 250px; height: 100%;
+            content: "";
+            z-index: 2;
+        }
+        .logos:before { left: 0; background: linear-gradient(to left, rgba(255, 255, 255, 0), #ffffff); }
+        .logos:after { right: 0; background: linear-gradient(to right, rgba(255, 255, 255, 0), #ffffff); }
+        .logos:hover .logos-slide { animation-play-state: paused; }
+        .logos-slide { display: inline-block; animation: 45s slide infinite linear; }
+        .logos-slide img { height: 40px; margin: 0 40px; }
+    }
+}

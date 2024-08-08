@@ -1,0 +1,314 @@
+main {
+  margin: 150px auto;
+}
+@media screen and (max-width: 768px) {
+  main {
+    margin: 120px auto;
+  }
+}
+main .education {
+  width: 90%;
+  margin: 50px auto 0 auto;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  /* Logo carousel */
+}
+@media screen and (max-width: 830px) {
+  main .education {
+    width: 90%;
+  }
+}
+main .education .education-intro {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+main .education .education-intro h1, main .education .education-intro p {
+  text-align: center;
+  margin: 0;
+}
+main .education .education-intro p {
+  margin-top: 10px;
+}
+main .education #accordion-sec {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+main .education #accordion-sec h2 {
+  margin: 0 auto 30px auto;
+  font-size: 28px;
+}
+main .education #accordion-sec p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+@media screen and (max-width: 830px) {
+  main .education #accordion-sec {
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+  }
+}
+main .education #accordion-sec hr {
+  margin: 60px auto;
+}
+@media screen and (min-width: 830px) {
+  main .education #accordion-sec hr {
+    display: none;
+  }
+}
+main .education #accordion-sec .accordion-container {
+  width: 45%;
+  margin: 0 auto;
+}
+@media screen and (max-width: 830px) {
+  main .education #accordion-sec .accordion-container {
+    width: 100%;
+  }
+}
+main .education #accordion-sec .accordion-container .main-study {
+  width: 100%;
+  padding: 20px;
+  background-color: var(--medium-green);
+  border-radius: var(--border-radius);
+  margin-bottom: 40px;
+  position: relative;
+}
+main .education #accordion-sec .accordion-container .main-study h3, main .education #accordion-sec .accordion-container .main-study h4 {
+  margin: 0 0 10px 0;
+  text-align: left;
+}
+main .education #accordion-sec .accordion-container .main-study h3 {
+  font-size: 22px;
+  padding: 0 50px 0 0;
+}
+main .education #accordion-sec .accordion-container .main-study h4 {
+  font-size: 20px;
+  font-weight: 700;
+}
+main .education #accordion-sec .accordion-container .main-study .read-more .card-contents {
+  border: 0;
+  margin-top: 20px;
+  padding: 20px;
+  background-color: var(--white);
+}
+main .education #accordion-sec .accordion-container .main-study .read-more .card-contents i {
+  line-height: 2;
+  font-size: 20px;
+  padding-left: 5px;
+}
+@media screen and (max-width: 830px) {
+  main .education #accordion-sec .accordion-container .main-study .read-more .card-contents i {
+    font-size: 18px;
+  }
+}
+main .education #accordion-sec .accordion-container .main-study .read-more .card-contents ul {
+  margin-bottom: 0;
+  padding-left: 1.5rem;
+}
+main .education #accordion-sec .accordion-container .main-study .read-more .card-contents ul li {
+  font-size: 20px;
+  line-height: 2;
+}
+@media screen and (max-width: 830px) {
+  main .education #accordion-sec .accordion-container .main-study .read-more .card-contents ul li {
+    font-size: 18px;
+  }
+}
+main .education #accordion-sec .accordion-container .main-study .read-more .card-contents ul li a {
+  color: var(--green);
+}
+main .education #accordion-sec .accordion-container .main-study .read-more .card-contents ul li a:hover {
+  color: var(--dark-gray);
+}
+main .education #accordion-sec .accordion-container .main-study .buttons {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+  margin: 20px 0 0 0;
+}
+main .education #accordion-sec .accordion-container .main-study .buttons button.btn-contents {
+  text-decoration: none;
+  line-height: 1.7;
+  font-weight: 600;
+  transition: 300ms;
+  width: fit-content;
+  display: block;
+  background-color: var(--white);
+  color: var(--dark-gray);
+  font-size: 16px;
+  padding: 8px 15px;
+  border-radius: var(--border-radius);
+  border: 1px solid var(--light-gray);
+}
+main .education #accordion-sec .accordion-container .main-study .buttons button.btn-contents:hover {
+  text-decoration: none;
+  cursor: pointer;
+  transition: 300ms;
+  color: var(--green);
+}
+main .education #accordion-sec .accordion-container .main-study .ribbon {
+  --f: 15px;
+  --r: 10px;
+  --t: 15px;
+  position: absolute;
+  inset: var(--t) calc(-1 * var(--f)) auto auto;
+  padding: 0 10px var(--f) calc(10px + var(--r));
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - var(--f)), calc(100% - var(--f)) 100%, calc(100% - var(--f)) calc(100% - var(--f)), 0 calc(100% - var(--f)), var(--r) calc(50% - var(--f) / 2));
+  background: var(--green);
+  box-shadow: 0 calc(-1 * var(--f)) 0 inset rgba(0, 0, 0, 0.3333333333);
+}
+main .education #accordion-sec .accordion-container .main-study .ribbon p {
+  font-weight: 600;
+  letter-spacing: 1px;
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+  color: var(--white);
+}
+main .education #accordion-sec .accordion-container .accordion-item {
+  border-radius: var(--border-radius);
+  margin: 0 auto 20px auto;
+  border: 1px solid var(--medium-gray);
+  padding: 2px;
+  background-color: var(--medium-gray);
+}
+main .education #accordion-sec .accordion-container .accordion-item h2.accordion-header {
+  margin: 0;
+  border-radius: var(--border-radius);
+  --bs-accordion-active-bg: var(--light-green);
+  --bs-accordion-btn-bg: var(--white);
+}
+main .education #accordion-sec .accordion-container .accordion-item h2.accordion-header button.accordion-button {
+  font-weight: 800;
+  letter-spacing: -1px;
+  font-size: 20px;
+  color: var(--dark-gray);
+}
+main .education #accordion-sec .accordion-container .accordion-item h2.accordion-header button.accordion-button:hover {
+  background-color: var(--light-green);
+  color: var(--dark-green);
+}
+main .education #accordion-sec .accordion-container .accordion-item h2.accordion-header .accordion-button::after {
+  font-family: "Font Awesome 6 Free";
+  background-image: none;
+  content: "\f078";
+  --bs-accordion-btn-icon-width: initial;
+}
+main .education #accordion-sec .accordion-container .accordion-item h2.accordion-header .accordion-button::after:not(.collapsed) {
+  font-family: "Font Awesome 6 Free";
+  background-image: none;
+  content: "\f077";
+  --bs-accordion-btn-icon-width: initial;
+}
+main .education #accordion-sec .accordion-container .accordion-item .accordion-body {
+  border-top: 3px solid var(--medium-gray);
+  font-family: var(--font);
+  color: var(--dark-gray);
+  background-color: var(--medium-green);
+  padding: 20px 20px 10px 20px;
+}
+main .education #accordion-sec .accordion-container .accordion-item .accordion-body .exp-box {
+  margin: 0 auto;
+  width: 100%;
+  border-radius: var(--border-radius);
+}
+main .education #accordion-sec .accordion-container .accordion-item .accordion-body .exp-box .exp-text {
+  padding: 0;
+  margin: 0 0 30px 0;
+}
+main .education #accordion-sec .accordion-container .accordion-item .accordion-body .exp-box .exp-text p {
+  margin-bottom: 15px;
+}
+@media screen and (max-width: 830px) {
+  main .education #accordion-sec .accordion-container .accordion-item .accordion-body .exp-box .exp-text {
+    padding: 10px 0;
+  }
+}
+main .education #accordion-sec .accordion-container .accordion-item .accordion-body .exp-box .exp-text i {
+  line-height: 2;
+  font-size: 20px;
+  padding-left: 5px;
+}
+@media screen and (max-width: 830px) {
+  main .education #accordion-sec .accordion-container .accordion-item .accordion-body .exp-box .exp-text i {
+    font-size: 18px;
+  }
+}
+main .education #accordion-sec .accordion-container .accordion-item .accordion-body .exp-box .exp-text ul {
+  margin-bottom: 0;
+  padding-left: 1.5rem;
+}
+main .education #accordion-sec .accordion-container .accordion-item .accordion-body .exp-box .exp-text ul li {
+  font-size: 20px;
+  line-height: 2;
+}
+@media screen and (max-width: 830px) {
+  main .education #accordion-sec .accordion-container .accordion-item .accordion-body .exp-box .exp-text ul li {
+    font-size: 18px;
+  }
+}
+main .education #accordion-sec .accordion-container .accordion-item .accordion-body .exp-box .exp-text ul li a {
+  color: var(--green);
+}
+main .education #accordion-sec .accordion-container .accordion-item .accordion-body .exp-box .exp-text ul li a:hover {
+  color: var(--dark-gray);
+}
+main .education #accordion-sec .accordion-container .accordion-button:not(.collapsed) {
+  color: inherit;
+}
+main .education #accordion-sec .accordion-container button.accordion-button:focus {
+  box-shadow: inherit;
+}
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+main .education .logos {
+  overflow: hidden;
+  padding: 0;
+  margin: 80px auto 90px auto;
+  white-space: nowrap;
+  position: relative;
+  width: 100%;
+}
+main .education .logos:before,
+main .education .logos:after {
+  position: absolute;
+  top: 0;
+  width: 250px;
+  height: 100%;
+  content: "";
+  z-index: 2;
+}
+main .education .logos:before {
+  left: 0;
+  background: linear-gradient(to left, rgba(255, 255, 255, 0), #ffffff);
+}
+main .education .logos:after {
+  right: 0;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0), #ffffff);
+}
+main .education .logos:hover .logos-slide {
+  animation-play-state: paused;
+}
+main .education .logos-slide {
+  display: inline-block;
+  animation: 50s slide infinite linear;
+}
+main .education .logos-slide img {
+  height: 40px;
+  margin: 0 40px;
+}/*# sourceMappingURL=education.css.map */

@@ -1,0 +1,87 @@
+main {
+    margin: 150px auto;
+    @media screen and (max-width: 768px) { margin: 120px auto; }
+}
+
+section.container-projects {
+    width: 90%; margin: 0 auto; 
+    display: flex; flex-flow: column wrap; justify-content: center; align-content: flex-start;
+    h1 { text-align: center; margin: 0 auto 20px auto; }
+    p { font-size: 22px; text-align: center; line-height: 2; margin: 0 auto 10px auto; 
+        @media screen and (max-width: 768px) { font-size: 20px; text-align: center; line-height: 1.8; }
+    }
+    @media screen and (max-width: 1366px) { width: 90%; }
+
+        .previews { width: 100%; margin: 50px auto;
+            display: flex; flex-flow: row wrap; justify-content: space-between; align-content: flex-start; align-items: stretch; gap: 150px 0;
+            @media screen and (max-width: 576px) { flex-flow: column wrap; justify-content: center; align-content: center; gap: 0; }
+            hr { margin: 50px auto;
+                @media screen and (min-width: 576px) { display: none; }
+            }
+            .portfolio-project { width: 30%; 
+                display: flex; flex-flow: column wrap; justify-content: flex-start; align-content: center;
+                @media screen and (max-width: 1024px) { width: 45%; }
+                @media screen and (max-width: 576px) { width: 100%; }
+                h3 { text-align: center; font-size: 26px; margin-top: 0; }
+                .portfolio-preview { width: 100%; margin: 10px auto; position: relative;
+                    img { width: 100%; height: auto;  }
+
+                    .ribbon-2 {
+                        --f: 15px; // folded part
+                        --r: 10px; // ribbon shape
+                        --t: 10px; // top offset
+                        
+                        position: absolute;
+                        inset: var(--t) calc(-1*var(--f)) auto auto;
+                        padding: 0 10px var(--f) calc(10px + var(--r));
+                        clip-path: 
+                          polygon(0 0,100% 0,100% calc(100% - var(--f)),calc(100% - var(--f)) 100%,
+                            calc(100% - var(--f)) calc(100% - var(--f)),0 calc(100% - var(--f)),
+                            var(--r) calc(50% - var(--f)/2));
+                        background: var(--light-green);
+                        box-shadow: 0 calc(-1*var(--f)) 0 inset #0005;
+
+                        p { font-weight: 600; letter-spacing: -0.5px; font-size: 18px;
+                            margin: 0; padding: 0;
+                        }
+                      }
+                      
+                      
+                }
+                .portfolio-buttons { width: 100%; margin: 30px auto 0 auto;
+                    display: flex; flex-flow: row wrap; justify-content: center; align-content: center; gap: 10px;
+                }
+                button.btn-expand {
+                    text-decoration: none;
+                    line-height: 1.7;
+                    font-weight: 600;
+                    transition: 300ms;
+                    width: fit-content; display: block;
+                    background-color: var(--light-gray); color: var(--dark-gray);
+                    font-size: 16px; 
+                    padding: 8px 15px;
+                    border-radius: var(--border-radius);
+                    border: 1px solid var(--light-gray);
+                    &:hover { text-decoration: none; cursor: pointer; transition: 300ms;
+                        background-color: var(--light-gray); color: var(--dark-gray); border: 1px solid var(--medium-gray); 
+                    }
+                }
+                .read-more { 
+                    width: 100%; margin-top: 10px;
+
+                    .card-contents { 
+                        margin-top: 10px;
+                        border-radius: var(--border-radius); border: 0;
+                        font-size: 18px;
+                        background-color: var(--medium-green);
+                        a { font-size: 18px; }
+                        p { font-size: 18px; margin: 0 0 10px 0; text-align: left; }
+                        ul { font-size: 18px; margin: 5px 0 10px 0;
+                            li { font-size: 18px; }
+                        }
+                        
+                    }
+                }
+            }
+        }
+}

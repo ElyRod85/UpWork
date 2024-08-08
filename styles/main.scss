@@ -1,0 +1,114 @@
+/* Containers */
+
+section.container90 {
+    .header-img { width: 40%;
+        display: flex; flex-flow: row wrap; justify-content: center;
+        img {
+            max-width: 100%; max-height: 450px;
+            margin: 0 auto;
+            object-fit: contain;
+            @media screen and (max-width: 768px) { max-height: 60vh; }
+        }
+        @media screen and (max-width: 768px) { flex-flow: column wrap; width: 100%; }
+    }
+    .header-text { width: 60%;
+        display: flex; flex-flow: column wrap; justify-content: center; gap: 0;
+        padding: 20px 0 20px 20px;
+        h1 { font-size: 30px; margin: 0 auto; }
+        h2 { font-size: 26px; margin: 0 auto; }
+        h3 { font-size: 32px; margin: 30px auto 0 auto; }
+        @media screen and (max-width: 768px) { width: 100%; min-height: 70vh; padding: 0 20px; 
+            h1 { font-size: 28px; }
+            h2 { font-size: 24px; }
+            h3 { font-size: 30px; }
+        }
+        .cta-container {
+            display: flex; flex-flow: row wrap; justify-content: center; align-items: center; gap: 30px; margin: 30px auto 0 auto;
+            @media screen and (max-width: 768px) { width: 100%; gap: 20px; }
+            @media screen and (max-width: 576px) { flex-flow: column wrap; }
+        }
+        @media screen and (max-width: 768px) { margin-bottom: 20px; }
+    }
+    @media screen and (max-width: 768px) { flex-flow: column-reverse wrap; }
+}
+
+section.text-container {
+    width: 80%; margin: 120px auto;
+    display: flex; flex-flow: column wrap; justify-content: center; align-content: center;
+    @media screen and (max-width: 1366px) { width: 90%; margin: 80px auto; }
+    p { font-size: 22px; text-align: center; line-height: 2;
+        &:last-of-type { margin-bottom: 0; }
+        @media screen and (max-width: 768px) { font-size: 20px; text-align: center; line-height: 1.8; }
+    }
+}
+
+section.skill-box { 
+    width: 80%; margin: 20px auto; 
+    display: flex; flex-flow: column wrap; justify-content: center; align-items: center; gap: 20px;
+    @media screen and (max-width: 1366px) { width: 90%; }
+
+    .skill-row {
+        width: 100%; margin: 70px auto; 
+        display: flex; flex-flow: row wrap; justify-content: space-between; align-items: center;
+        @media screen and (max-width: 768px) { flex-flow: column wrap; justify-content: center; margin: 60px auto; }
+        .skill-img { width: 28%;
+            display: flex; justify-content: center;
+            @media screen and (max-width: 768px) { width: 100%; }
+            img { width: 100%; height: auto; padding: 0; margin: 0 auto; 
+                @media screen and (max-width: 768px) { width: 70%; }
+            }
+        }
+        .skill-contents { width: 68%;
+            h2 { text-align: left; margin-top: 0; 
+                @media screen and (max-width: 768px) { text-align: center; margin-top: 50px; }
+            }
+            p { margin: 30px 0 0 0; }
+            .skill-techs {
+                width: 100%; background-color: var(--light-green); border-radius: var(--border-radius);
+                padding: 10px 20px; 
+                p { margin: 0; padding: 0; font-size: 18px; }
+            }
+            
+            @media screen and (max-width: 768px) { width: 100%; }
+        }
+    }
+    .rev { flex-flow: row-reverse wrap; }
+}
+
+section.container-projects {
+    width: 80%; margin: 80px auto 0 auto; 
+    display: flex; flex-flow: column wrap; justify-content: center; align-content: flex-start;
+    h2 { text-align: center; margin: 0 auto 20px auto; }
+    p { font-size: 22px; text-align: center; line-height: 2; margin: 0 auto 10px auto; 
+        @media screen and (max-width: 768px) { font-size: 20px; text-align: center; line-height: 1.8; }
+    }
+    @media screen and (max-width: 1366px) { width: 90%; }
+    .previews { width: 100%; margin: 50px auto 20px auto;
+        display: flex; flex-flow: row wrap; justify-content: space-between; align-content: flex-start; align-items: stretch;
+        @media screen and (max-width: 768px) { gap: 80px 0; }
+        @media screen and (max-width: 576px) { flex-flow: column wrap; justify-content: center; align-content: center; gap: 0; }
+        hr { margin: 50px auto;
+            @media screen and (min-width: 576px) { display: none; }
+        }
+        .portfolio-project { width: 30%; 
+            display: flex; flex-flow: column wrap; justify-content: flex-start; align-content: center;
+            @media screen and (max-width: 768px) { width: 48%; }
+            @media screen and (max-width: 576px) { width: 100%; }
+            &:last-of-type {
+                @media screen and (max-width: 768px) { margin-bottom: 0; }    
+            }
+            h3 { text-align: center; font-size: 26px; margin-top: 0; }
+            .portfolio-preview { width: 100%; margin: 10px auto;
+                img { width: 100%; height: auto; }
+            }
+            .portfolio-buttons { width: 100%; margin: 30px auto 0 auto;
+                display: flex; flex-flow: row wrap; justify-content: center; align-content: center; gap: 10px;
+            }
+        }
+    }
+    .view-portfolio { width: 100%; margin: 50px auto;
+        display: flex; flex-flow: row wrap; justify-content: center; align-content: center;
+        .cta { display: block; text-align: center; }
+    }
+}
+

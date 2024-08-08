@@ -1,0 +1,249 @@
+main {
+  margin: 150px auto;
+}
+@media screen and (max-width: 768px) {
+  main {
+    margin: 120px auto;
+  }
+}
+main .work-exp {
+  width: 90%;
+  margin: 50px auto 0 auto;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  /* Logo carousel */
+}
+@media screen and (max-width: 830px) {
+  main .work-exp {
+    width: 90%;
+  }
+}
+main .work-exp .work-intro {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+main .work-exp .work-intro h1, main .work-exp .work-intro p {
+  text-align: center;
+  margin: 0;
+}
+main .work-exp .work-intro p {
+  margin-top: 10px;
+}
+main .work-exp #accordion-sec {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+}
+main .work-exp #accordion-sec h2 {
+  margin: 0 auto 15px auto;
+  font-size: 32px;
+}
+main .work-exp #accordion-sec p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+@media screen and (max-width: 768px) {
+  main .work-exp #accordion-sec {
+    gap: 0;
+  }
+}
+main .work-exp #accordion-sec .accordion-container {
+  width: 100%;
+  margin: 50px auto 0 auto;
+}
+main .work-exp #accordion-sec .accordion-container .accordion-item {
+  border-radius: var(--border-radius);
+  margin: 0 auto 20px auto;
+  border: 1px solid var(--medium-gray);
+  padding: 2px;
+  background-color: var(--medium-gray);
+}
+main .work-exp #accordion-sec .accordion-container .accordion-item h2.accordion-header {
+  margin: 0;
+  border-radius: var(--border-radius);
+  --bs-accordion-active-bg: var(--light-green);
+  --bs-accordion-btn-bg: var(--white);
+}
+main .work-exp #accordion-sec .accordion-container .accordion-item h2.accordion-header button.accordion-button {
+  font-weight: 800;
+  letter-spacing: -1px;
+  font-size: 20px;
+  color: var(--dark-gray);
+}
+main .work-exp #accordion-sec .accordion-container .accordion-item h2.accordion-header button.accordion-button:hover {
+  background-color: var(--medium-green);
+  color: var(--dark-green);
+}
+main .work-exp #accordion-sec .accordion-container .accordion-item h2.accordion-header .accordion-button::after {
+  font-family: "Font Awesome 6 Free";
+  background-image: none;
+  content: "\f078";
+  --bs-accordion-btn-icon-width: initial;
+}
+main .work-exp #accordion-sec .accordion-container .accordion-item h2.accordion-header .accordion-button::after:not(.collapsed) {
+  font-family: "Font Awesome 6 Free";
+  background-image: none;
+  content: "\f077";
+  --bs-accordion-btn-icon-width: initial;
+}
+main .work-exp #accordion-sec .accordion-container .accordion-item h2.accordion-header .details {
+  font-weight: 400;
+  letter-spacing: -0.5;
+  padding: 0 10px;
+  font-size: 20px;
+}
+@media screen and (max-width: 792px) {
+  main .work-exp #accordion-sec .accordion-container .accordion-item h2.accordion-header .details {
+    display: none;
+  }
+}
+main .work-exp #accordion-sec .accordion-container .accordion-item .accordion-body {
+  border-top: 3px solid var(--medium-gray);
+  font-family: var(--font);
+  color: var(--dark-gray);
+  background-color: var(--white);
+  padding: 20px 20px 10px 20px;
+}
+main .work-exp #accordion-sec .accordion-container .accordion-item .accordion-body .exp-box {
+  margin: 0 auto;
+  width: 100%;
+  border-radius: var(--border-radius);
+}
+main .work-exp #accordion-sec .accordion-container .accordion-item .accordion-body .exp-box .exp-text {
+  padding: 0;
+  margin: 0 0 30px 0;
+}
+main .work-exp #accordion-sec .accordion-container .accordion-item .accordion-body .exp-box .exp-text p {
+  margin-bottom: 15px;
+}
+@media screen and (max-width: 830px) {
+  main .work-exp #accordion-sec .accordion-container .accordion-item .accordion-body .exp-box .exp-text {
+    padding: 10px 0;
+  }
+}
+main .work-exp #accordion-sec .accordion-container .accordion-item .accordion-body .exp-box .exp-text .details {
+  font-weight: 400;
+  letter-spacing: -0.5;
+  font-size: 19px;
+  text-align: center;
+}
+main .work-exp #accordion-sec .accordion-container .accordion-item .accordion-body .exp-box .exp-text .details:first-of-type {
+  margin-bottom: 5px;
+}
+main .work-exp #accordion-sec .accordion-container .accordion-item .accordion-body .exp-box .exp-text .details:nth-of-type(2) {
+  margin-top: 5px;
+  margin-bottom: 30px;
+}
+@media screen and (min-width: 792px) {
+  main .work-exp #accordion-sec .accordion-container .accordion-item .accordion-body .exp-box .exp-text .details {
+    display: none;
+  }
+}
+main .work-exp #accordion-sec .accordion-container .accordion-item .accordion-body .exp-box .exp-text .resp-skills {
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: stretch;
+  margin: 40px auto 0 auto;
+}
+@media screen and (max-width: 830px) {
+  main .work-exp #accordion-sec .accordion-container .accordion-item .accordion-body .exp-box .exp-text .resp-skills {
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+  }
+}
+main .work-exp #accordion-sec .accordion-container .accordion-item .accordion-body .exp-box .exp-text .resp-skills .resp-box {
+  border: 2px solid var(--dark-gray);
+  background-color: var(--white);
+  border-radius: var(--border-radius);
+}
+main .work-exp #accordion-sec .accordion-container .accordion-item .accordion-body .exp-box .exp-text .resp-skills .resp-box:first-of-type {
+  width: 60%;
+}
+@media screen and (max-width: 830px) {
+  main .work-exp #accordion-sec .accordion-container .accordion-item .accordion-body .exp-box .exp-text .resp-skills .resp-box:first-of-type {
+    width: 100%;
+  }
+}
+main .work-exp #accordion-sec .accordion-container .accordion-item .accordion-body .exp-box .exp-text .resp-skills .resp-box:last-of-type {
+  width: 35%;
+}
+@media screen and (max-width: 830px) {
+  main .work-exp #accordion-sec .accordion-container .accordion-item .accordion-body .exp-box .exp-text .resp-skills .resp-box:last-of-type {
+    width: 100%;
+  }
+}
+main .work-exp #accordion-sec .accordion-container .accordion-item .accordion-body .exp-box .exp-text .resp-skills .resp-box .resp-title {
+  padding: 20px 10px;
+  background-color: var(--dark-gray);
+}
+main .work-exp #accordion-sec .accordion-container .accordion-item .accordion-body .exp-box .exp-text .resp-skills .resp-box .resp-title h3 {
+  font-size: 23px;
+  text-align: center;
+  line-height: 1;
+  margin: 0;
+  color: var(--white);
+  font-weight: 700;
+}
+main .work-exp #accordion-sec .accordion-container .accordion-item .accordion-body .exp-box .exp-text .resp-skills .resp-box .resp-contents {
+  padding: 20px 15px 0 10px;
+}
+main .work-exp #accordion-sec .accordion-container .accordion-button:not(.collapsed) {
+  color: inherit;
+}
+main .work-exp #accordion-sec .accordion-container button.accordion-button:focus {
+  box-shadow: inherit;
+}
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+main .work-exp .logos {
+  overflow: hidden;
+  padding: 0;
+  margin: 80px auto 50px auto;
+  white-space: nowrap;
+  position: relative;
+  width: 100%;
+}
+main .work-exp .logos:before,
+main .work-exp .logos:after {
+  position: absolute;
+  top: 0;
+  width: 250px;
+  height: 100%;
+  content: "";
+  z-index: 2;
+}
+main .work-exp .logos:before {
+  left: 0;
+  background: linear-gradient(to left, rgba(255, 255, 255, 0), #ffffff);
+}
+main .work-exp .logos:after {
+  right: 0;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0), #ffffff);
+}
+main .work-exp .logos:hover .logos-slide {
+  animation-play-state: paused;
+}
+main .work-exp .logos-slide {
+  display: inline-block;
+  animation: 45s slide infinite linear;
+}
+main .work-exp .logos-slide img {
+  height: 40px;
+  margin: 0 40px;
+}/*# sourceMappingURL=exp.css.map */

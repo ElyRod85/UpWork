@@ -1,0 +1,169 @@
+
+main { margin: 150px auto;
+    @media screen and (max-width: 768px) { margin: 120px auto; }
+
+    .education { width: 90%; margin: 50px auto 0 auto;
+        display: flex; flex-flow: column wrap; justify-content: flex-start; align-items: flex-start;
+        @media screen and (max-width: 830px) { width: 90%; }
+        .education-intro {  
+            width: 100%; padding: 0; margin: 0;
+            h1, p { text-align: center; margin: 0; }
+            p { margin-top: 10px; }
+        }
+
+        #accordion-sec {
+            width: 100%; margin: 0 auto; 
+            display: flex; flex-flow: row wrap; justify-content: space-between; align-items: flex-start;
+            h2 { margin: 0 auto 30px auto; font-size: 28px; }
+            p { margin-top: 0; margin-bottom: 0; }
+            @media screen and (max-width: 830px) { flex-flow: column wrap; justify-content: center; align-items: center; }
+
+            hr { margin: 60px auto;
+                @media screen and (min-width: 830px) { display: none; }
+            }
+            
+            .accordion-container { width: 45%; margin: 0 auto;
+                @media screen and (max-width: 830px) { width: 100%; 
+                    
+                }
+
+                .main-study { width: 100%; padding: 20px; background-color: var(--medium-green); border-radius: var(--border-radius);
+                    margin-bottom: 40px; position: relative;
+                    h3, h4 { margin: 0 0 10px 0; text-align: left; }
+                    h3 { font-size: 22px; padding: 0 50px 0 0; }
+                    h4 { font-size: 20px; font-weight: 700; }
+                    
+                    .read-more {
+                        
+                        .card-contents { border: 0; margin-top: 20px; padding: 20px; background-color: var(--white);
+                            i { line-height: 2; font-size: 20px; padding-left: 5px; 
+                                @media screen and (max-width: 830px) { font-size: 18px; }
+                            }
+                            ul { margin-bottom: 0; padding-left: 1.5rem;
+                                li { font-size: 20px; line-height: 2; 
+                                    @media screen and (max-width: 830px) { font-size: 18px; }
+                                    a { color: var(--green); 
+                                        &:hover { color: var(--dark-gray); }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .buttons { display: flex; flex-flow: row wrap; justify-content: flex-start; align-items: center; gap: 10px;
+                        margin: 20px 0 0 0;
+                        button.btn-contents {
+                            text-decoration: none;
+                            line-height: 1.7;
+                            font-weight: 600;
+                            transition: 300ms;
+                            width: fit-content; display: block;
+                            background-color: var(--white); color: var(--dark-gray);
+                            font-size: 16px; 
+                            padding: 8px 15px;
+                            border-radius: var(--border-radius);
+                            border: 1px solid var(--light-gray);
+                            &:hover { text-decoration: none; cursor: pointer; transition: 300ms; color: var(--green); }
+                        }
+                    }
+                    .ribbon {
+                        --f: 15px; // folded part
+                        --r: 10px; // ribbon shape
+                        --t: 15px; // top offset
+                        
+                        position: absolute;
+                        inset: var(--t) calc(-1*var(--f)) auto auto;
+                        padding: 0 10px var(--f) calc(10px + var(--r));
+                        clip-path: 
+                          polygon(0 0,100% 0,100% calc(100% - var(--f)),calc(100% - var(--f)) 100%,
+                            calc(100% - var(--f)) calc(100% - var(--f)),0 calc(100% - var(--f)),
+                            var(--r) calc(50% - var(--f)/2));
+                        background: var(--green);
+                        box-shadow: 0 calc(-1*var(--f)) 0 inset #0005;
+
+                        p { font-weight: 600; letter-spacing: 1px; font-size: 16px;
+                            margin: 0; padding: 0; color: var(--white);
+                        }
+                    }
+
+                }
+
+                .accordion-item { border-radius: var(--border-radius); margin: 0 auto 20px auto;
+                    border: 1px solid var(--medium-gray); padding: 2px; background-color: var(--medium-gray);
+                    h2.accordion-header { margin: 0; border-radius: var(--border-radius);  
+                        button.accordion-button {
+                            font-weight: 800; letter-spacing: -1px; font-size: 20px; color: var(--dark-gray);
+                            &:hover { background-color: var(--light-green); color: var(--dark-green); }
+                        }
+                        .accordion-button::after {
+                            font-family: 'Font Awesome 6 Free';
+                            background-image: none;
+                            content: "\f078"; 
+                            --bs-accordion-btn-icon-width: initial;
+                        }
+                        .accordion-button::after:not(.collapsed) {
+                            font-family: 'Font Awesome 6 Free';
+                            background-image: none;
+                            content: "\f077"; 
+                            --bs-accordion-btn-icon-width: initial;
+                        }
+                        --bs-accordion-active-bg: var(--light-green);
+                        --bs-accordion-btn-bg: var(--white);
+                    }
+                    .accordion-body {
+                        border-top: 3px solid var(--medium-gray);
+                        font-family: var(--font); color: var(--dark-gray);
+                        background-color: var(--medium-green); padding: 20px 20px 10px 20px;
+                        .exp-box { margin: 0 auto; width: 100%; border-radius: var(--border-radius); 
+                            .exp-text { padding: 0; margin: 0 0 30px 0;
+                                p { margin-bottom: 15px; }
+                                @media screen and (max-width: 830px) { padding: 10px 0; }
+
+                                i { line-height: 2; font-size: 20px; padding-left: 5px; 
+                                    @media screen and (max-width: 830px) { font-size: 18px; }
+                                }
+                                ul { margin-bottom: 0; padding-left: 1.5rem;
+                                    li { font-size: 20px; line-height: 2; 
+                                        @media screen and (max-width: 830px) { font-size: 18px; }
+                                        a { color: var(--green); 
+                                            &:hover { color: var(--dark-gray); }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .accordion-button:not(.collapsed) { color: inherit; }
+                button.accordion-button:focus{ box-shadow: inherit; }
+            }
+        }
+
+        /* Logo carousel */
+        
+        @keyframes slide {
+            from { transform: translateX(0); }
+            to { transform: translateX(-100%); }
+        }
+        
+        .logos {
+            overflow: hidden;
+            padding: 0; margin: 80px auto 90px auto;
+            white-space: nowrap;
+            position: relative;
+            width: 100%;
+        }
+        .logos:before,
+        .logos:after {
+            position: absolute;
+            top: 0;
+            width: 250px; height: 100%;
+            content: "";
+            z-index: 2;
+        }
+        .logos:before { left: 0; background: linear-gradient(to left, rgba(255, 255, 255, 0), #ffffff); }
+        .logos:after { right: 0; background: linear-gradient(to right, rgba(255, 255, 255, 0), #ffffff); }
+        .logos:hover .logos-slide { animation-play-state: paused; }
+        .logos-slide { display: inline-block; animation: 50s slide infinite linear; }
+        .logos-slide img { height: 40px; margin: 0 40px; }
+    }
+}
